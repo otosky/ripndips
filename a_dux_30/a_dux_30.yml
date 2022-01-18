@@ -132,6 +132,8 @@ points:
         footprints:
           choc_hotswap:
             type: choc
+            anchor:
+              rotate: 90
             nets:
               from: =column_net
               to: GND
@@ -142,7 +144,7 @@ points:
           choc:
             type: choc
             anchor:
-              rotate: 180
+              rotate: -90
             nets:
               from: =column_net
               to: GND
