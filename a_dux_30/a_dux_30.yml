@@ -4,7 +4,7 @@ points:
       columns:
         pinky:
           spread: 18
-          rotate: 15
+          rotate: 12
           origin: [0, -17]
           rows:
             bottom:
@@ -19,8 +19,8 @@ points:
               column_net: P5 
         ring:
           spread: 18
-          stagger: 17
-          rotate: -10
+          stagger: 15
+          rotate: -7
           origin: [0, -17]
           rows:
             bottom:
@@ -66,7 +66,7 @@ points:
               column_net: P16
         inner:
           spread: 18
-          stagger: -17/6
+          stagger: 8.5
           origin: [0, -17]
           rows: 
             bottom:
@@ -109,7 +109,7 @@ points:
     thumb:
       anchor:
         ref: matrix_inner_bottom
-        shift: [0,-24]
+        shift: [0,-36]
       columns:
         first:
           rotate: -15
@@ -182,7 +182,7 @@ pcbs:
         type: promicro
         anchor:
           ref: matrix_inner_home
-          shift: [19, -8.5]
+          shift: [19, -8.]
           rotate: -90
         params:
          orientation: down
@@ -200,5 +200,3 @@ pcbs:
           reverse: true
           symmetric: true
 
-
- 
