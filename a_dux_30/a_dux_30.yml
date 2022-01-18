@@ -8,7 +8,7 @@ points:
           origin: [0, -17]
           rows:
             bottom:
-              bind: [5, 0, 0, 0]
+              bind: 5
               column_net: P7
               skip: true
             home:
@@ -24,13 +24,13 @@ points:
           origin: [0, -17]
           rows:
             bottom:
-              bind: [0, 0, 2, 10]
+              #bind: [0, 0, 2, 10]
               column_net: P4
             home:
-              bind: [5, 0, 5, 0]
+              #bind: [5, 0, 5, 0]
               column_net: P3
             top:
-              bind: [0, 5, 0, 0]
+              #bind: [0, 5, 0, 0]
               column_net: P0
         middle:
           spread: 18
@@ -39,13 +39,13 @@ points:
           origin: [0, -17]
           rows:
             bottom:
-              bind: [0, 10, 0, 5]
+              bind: 5             
               column_net: P1
             home:
               bind: 5
               column_net: P19           
             top:
-              bind: [0, 0, 0, 0]
+              bind: [0, 5, 0, 5]
               column_net: P18
           key:
             shift: [0.2, 0]
@@ -76,7 +76,7 @@ points:
               bind: [0, 27, 0, 5]
               column_net: P20
             top:
-              bind: [0, 0, 5, 5]
+              #bind: [0, 0, 5, 5]
               column_net: P21
               skip: true
       key:
@@ -158,22 +158,37 @@ outlines:
         side: left
         size: [18,17]
         corner: 1
-    first:
-      - type: outline
-        name: raw
-        fillet: 3
-    second:
-      - type: outline
-        name: first
-        fillet: 2
-    third:
-      - type: outline
-        name: second
-        fillet: 1   
+        bevel: .5
+    rect:
+      - type: rectangle
+        size: [75,240]
+        anchor:
+          - ref: matrix_pinky_home
+            shift: [-84, -100]
+      - type: rectangle
+        size: [150,90]
+        anchor:
+          - ref: matrix_pinky_home
+            shift: [-20, -100]
+      - type: rectangle
+        size: [50, 120]
+        anchor:
+          - ref: matrix_inner_bottom
+            shift: [59,-50]       
+    circ:
+      - type: circle
+       radius: 67
+        anchor:
+          - ref: matrix_middle_bottom
+            shift: [3,-22]
+      - -rect
     panel:
       - type: outline
-        name: third
-        fillet: 0.5
+        name: raw
+        fillet: 1
+      - +circ
+
+    
 pcbs:
   architeuthis_dux:
     outlines:
@@ -184,7 +199,7 @@ pcbs:
         type: promicro
         anchor:
           ref: matrix_inner_home
-          shift: [19, -8.]
+          shift: [19, -10]
           rotate: -90
         params:
          orientation: down
@@ -201,4 +216,4 @@ pcbs:
         params:
           reverse: true
           symmetric: true
-
+ 
