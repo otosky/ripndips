@@ -133,7 +133,7 @@ points:
           choc_hotswap:
             type: choc
             anchor:
-              rotate: 90
+              rotate: -90
             nets:
               from: =column_net
               to: GND
@@ -144,7 +144,7 @@ points:
           choc:
             type: choc
             anchor:
-              rotate: -90
+              rotate: 90
             nets:
               from: =column_net
               to: GND
@@ -218,7 +218,8 @@ pcbs:
           D: VCC
         anchor:
           ref: matrix_inner_home
-          shift: [34.75, 6.5]
+          shift: [29.5, -5] 
+          rotate: 180
         params:
           reverse: true
           symmetric: true
