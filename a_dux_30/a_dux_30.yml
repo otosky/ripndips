@@ -157,40 +157,46 @@ outlines:
       - type: keys
         side: left
         size: [18,17]
-        corner: 1
-        bevel: .5
-    rect:
+        corner: 3
+        
+    circle_cutaways:
       - type: rectangle
         size: [75,240]
         anchor:
           - ref: matrix_pinky_home
-            shift: [-84, -100]
+            shift: [-84, -90]
       - type: rectangle
         size: [150,90]
         anchor:
           - ref: matrix_pinky_home
-            shift: [-20, -100]
+            shift: [-20, -90]
       - type: rectangle
         size: [50, 120]
         anchor:
           - ref: matrix_inner_bottom
             shift: [59,-50]       
-    circ:
+    half_circle:
       - type: circle
-       radius: 67
+        radius: 67
         anchor:
           - ref: matrix_middle_bottom
             shift: [3,-22]
-      - -rect
+      - -circle_cutaways
+    thumb_extension:
+      - type: rectangle
+        size: [28, 15]
+        anchor:
+          - ref: thumb_second_only
+            rotate: 30
+            shift: [-15.7, -7]
     panel:
       - type: outline
         name: raw
-        fillet: 1
-      - +circ
-
-    
+        fillet: 
+      - +half_circle
+      - +thumb_extension
 pcbs:
-  architeuthis_dux:
+  a_dux_30:
     outlines:
       main:
         outline: panel
