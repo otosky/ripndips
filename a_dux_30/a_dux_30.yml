@@ -19,7 +19,7 @@ points:
               column_net: P5 
         ring:
           spread: 18
-          stagger: 15
+          stagger: 17
           rotate: -7
           origin: [0, -17]
           rows:
