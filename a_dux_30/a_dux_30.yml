@@ -109,7 +109,7 @@ points:
     thumb:
       anchor:
         ref: matrix_inner_bottom
-        shift: [0,-36]
+        shift: [-2,-36]
       columns:
         first:
           rotate: -15
