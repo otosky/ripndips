@@ -52,7 +52,7 @@ points:
         index:
           spread: 18
           stagger: -17/3
-          rotate: -5
+          rotate: -1
           origin: [0, -17]
           rows:
             bottom:
