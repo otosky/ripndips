@@ -1,5 +1,7 @@
 meta:
   version: rev2
+  author: Oliver Tosky <olivertosky@gmail.com>
+
 points:
   zones:
     matrix:
