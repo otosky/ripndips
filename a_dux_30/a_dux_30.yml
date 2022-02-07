@@ -70,7 +70,7 @@ points:
           origin: [0, -17]
           rows: 
             bottom:
-              bind: [5, 19, 20, 2]
+              bind: [5, 17, 20, 2]
               column_net: P20
             home:
               bind: [0, 27, 0, 5]
@@ -155,7 +155,6 @@ outlines:
       - type: keys
         side: left
         size: [18,17]
-        corner: 3
         
     circle_cutaways:
       - type: rectangle
@@ -190,7 +189,6 @@ outlines:
     panel:
       - type: outline
         name: raw
-        fillet: 
       - +half_circle
       - +thumb_extension
 pcbs:
