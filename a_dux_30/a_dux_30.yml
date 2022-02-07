@@ -73,7 +73,7 @@ points:
               bind: [5, 19.1, 30.4, 2]
               column_net: P20
             home:
-              bind: [0, 27, 0, 5]
+              bind: [0, 19.1, 0, 5]
               column_net: P21
             top:
               skip: true
@@ -206,12 +206,12 @@ pcbs:
         nets:
           A: GND
           B: GND
-          C: P2
+          C: P9
           D: VCC
         anchor:
           ref: matrix_inner_home
-          shift: [29.5, -5] 
-          rotate: 180
+          shift: [28, -33] 
+          rotate: -90
         params:
           reverse: true
           symmetric: true
