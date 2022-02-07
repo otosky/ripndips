@@ -40,13 +40,13 @@ points:
           rows:
             bottom:
               bind: 5             
-              column_net: P15
+              column_net: P19
             home:
               bind: 5
-              column_net: P19           
+              column_net: P18           
             top:
               bind: [0, 5, 0, 5]
-              column_net: P18
+              column_net: P15
           key:
             shift: [0.2, 0]
         index:
@@ -70,7 +70,7 @@ points:
           origin: [0, -17]
           rows: 
             bottom:
-              bind: [5, 17, 31, 2]
+              bind: [5, 19.1, 30.4, 2]
               column_net: P20
             home:
               bind: [0, 27, 0, 5]
