@@ -179,18 +179,14 @@ outlines:
           - ref: matrix_middle_bottom
             shift: [3,-22]
       - -circle_cutaways
-    thumb_extension:
-      - type: rectangle
-        size: [28, 15]
-        anchor:
-          - ref: thumb_second_only
-            rotate: 30
-            shift: [-15.7, -7]
     panel:
       - type: outline
         name: raw
       - +half_circle
-      - +thumb_extension
+    final:
+      - type: outline
+        name: panel
+        fillet: 1
 pcbs:
   a_dux_30:
     outlines:
