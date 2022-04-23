@@ -206,7 +206,7 @@ pcbs:
         nets:
           A: GND
           B: GND
-          C: P9
+          C: P1
           D: VCC
         anchor:
           ref: matrix_inner_home
