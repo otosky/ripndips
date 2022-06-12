@@ -201,18 +201,11 @@ pcbs:
           rotate: -90
         params:
          orientation: down
-      trrs:
-        type: trrs
+      battery:
+        type: bat
         nets:
-          A: GND
-          B: GND
-          C: P1
-          D: VCC
+          neg: GND
         anchor:
-          ref: matrix_inner_home
-          shift: [28, -33] 
+          ref: matrix_inner_bottom
+          shift: [19, -15]
           rotate: -90
-        params:
-          reverse: true
-          symmetric: true
- 
