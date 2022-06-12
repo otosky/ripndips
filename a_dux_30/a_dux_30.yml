@@ -1,3 +1,7 @@
+meta:
+  version: rev2
+  author: olivertosky
+
 points:
   zones:
     matrix:
@@ -9,7 +13,6 @@ points:
           rows:
             bottom:
               bind: 5
-              column_net: P7
               skip: true
             home:
               bind: [0, 12, 0, 0]
@@ -19,19 +22,16 @@ points:
               column_net: P5 
         ring:
           spread: 18
-          stagger: 15
+          stagger: 17
           rotate: -7
           origin: [0, -17]
           rows:
             bottom:
-              #bind: [0, 0, 2, 10]
               column_net: P4
             home:
-              #bind: [5, 0, 5, 0]
               column_net: P3
             top:
-              #bind: [0, 5, 0, 0]
-              column_net: P0
+              column_net: P2
         middle:
           spread: 18
           stagger: 17/3
@@ -40,19 +40,19 @@ points:
           rows:
             bottom:
               bind: 5             
-              column_net: P1
+              column_net: P10
             home:
               bind: 5
-              column_net: P19           
+              column_net: P16          
             top:
               bind: [0, 5, 0, 5]
-              column_net: P18
+              column_net: P14
           key:
             shift: [0.2, 0]
         index:
           spread: 18
           stagger: -17/3
-          rotate: -5
+          rotate: -1
           origin: [0, -17]
           rows:
             bottom:
@@ -60,24 +60,22 @@ points:
               column_net: P15
             home:
               bind: [5, 0, 5, 0]
-              column_net: P14
+              column_net: P18
             top:
               bind: [0, 0, 0, 6]
-              column_net: P16
+              column_net: P19
         inner:
           spread: 18
           stagger: 8.5
           origin: [0, -17]
           rows: 
             bottom:
-              bind: [5, 19, 20, 2]
-              column_net: P10
-            home:
-              bind: [0, 27, 0, 5]
+              bind: [5, 19.1, 30.4, 2]
               column_net: P20
-            top:
-              #bind: [0, 0, 5, 5]
+            home:
+              bind: [0, 19.1, 0, 5]
               column_net: P21
+            top:
               skip: true
       key:
         footprints:
@@ -109,22 +107,22 @@ points:
     thumb:
       anchor:
         ref: matrix_inner_bottom
-        shift: [0,-36]
+        shift: [-2,-36]
       columns:
         first:
           rotate: -15
           rows:
             only:
-              column_net: P8
-              bind: [10, 1, 0, 70]
+              column_net: P7
+              bind: [10, 1, 1, 70]
         second:
           spread: 18
           rotate: -10
           origin: [-9, -9.5]
           rows:
             only:
-              column_net: P9
-              bind: [0, 0, 0, 5]
+              column_net: P8
+              bind: [0, 0, 1, 5]
       rows:
         only:
           padding: 17
@@ -157,7 +155,6 @@ outlines:
       - type: keys
         side: left
         size: [18,17]
-        corner: 3
         
     circle_cutaways:
       - type: rectangle
@@ -182,19 +179,14 @@ outlines:
           - ref: matrix_middle_bottom
             shift: [3,-22]
       - -circle_cutaways
-    thumb_extension:
-      - type: rectangle
-        size: [28, 15]
-        anchor:
-          - ref: thumb_second_only
-            rotate: 30
-            shift: [-15.7, -7]
     panel:
       - type: outline
         name: raw
-        fillet: 
       - +half_circle
-      - +thumb_extension
+    final:
+      - type: outline
+        name: panel
+        fillet: 1
 pcbs:
   a_dux_30:
     outlines:
@@ -214,12 +206,12 @@ pcbs:
         nets:
           A: GND
           B: GND
-          C: P2
+          C: P1
           D: VCC
         anchor:
           ref: matrix_inner_home
-          shift: [29.5, -5] 
-          rotate: 180
+          shift: [28, -33] 
+          rotate: -90
         params:
           reverse: true
           symmetric: true
