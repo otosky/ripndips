@@ -161,17 +161,17 @@ outlines:
         size: [75,240]
         anchor:
           - ref: matrix_pinky_home
-            shift: [-84, -90]
+            shift: [-85, -90]
       - type: rectangle
         size: [150,90]
         anchor:
           - ref: matrix_pinky_home
-            shift: [-20, -90]
+            shift: [-20, -100]
       - type: rectangle
         size: [50, 120]
         anchor:
           - ref: matrix_inner_bottom
-            shift: [59,-50]       
+            shift: [20,-50]       
     half_circle:
       - type: circle
         radius: 67
