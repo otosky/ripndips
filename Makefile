@@ -5,7 +5,7 @@ setup:
 	cd ergogen && npm install && npm audit fix
 
 compile:
-	node ./ergogen/src/cli.js $(KB)/$(KB).yml -o $(KB)/
+	node ./ergogen/src/cli.js $(KB)/$(KB).yml -o $(KB)/output/
 
 clean:
 	rm -rf $(KB)/output
